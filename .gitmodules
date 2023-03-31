@@ -1,3 +1,6 @@
 [submodule "lynsis"]
 	path = lynsis
 	url = https://github.com/CISOfy/lynis
+[submodule "plugnpray"]
+	path = plugnpray
+	url = git@github.com:Diplo2by/plugnpray.git
