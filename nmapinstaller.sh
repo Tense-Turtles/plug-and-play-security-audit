@@ -1,19 +1,22 @@
 #!/bin/bash
 
-Update the package list
+# Update the package list
 sudo apt update
 
 sudo apt install nmap
 
 echo "Nmap has been successfully installed."
 
-# Get the IP address of the computer
-IP=$(hostname -I | awk '{print $1}')
+# # Get the IP address of the computer
+# IP=$(hostname -I | awk '{print $1}')
 
-# Print IP 
-echo "My IP address is: $IP"
+# # Print IP 
+# echo "My IP address is: $IP"
 
-# Scan the local network for devices using Nmap
-nmap -sn $IP/24 -oX devices.xml
+# # Scan the local network for devices using Nmap
+# nmap -sn $IP/24 -oX devices.xml
 
-echo "Nmap scan complete. XML report generated in devices.xml."
+# nmap -A -sS -sV -p- -T4 $IP -oX targetDevice.xml
+
+
+# echo "Nmap scan complete. XML report generated in devices.xml."

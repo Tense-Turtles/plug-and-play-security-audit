@@ -20,4 +20,4 @@ IFS=. read -r m1 m2 m3 m4 <<< "$netmask"
 subnet="$((i1 & m1)).$((i2 & m2)).$((i3 & m3)).$((i4 & m4))"
 
 nmap -A -sS -sV -p- -T4 $ip_address
-nmap -sn $subnet/24
+# nmap -sn $subnet/24
