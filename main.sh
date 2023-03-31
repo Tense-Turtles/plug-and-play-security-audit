@@ -1,4 +1,13 @@
 #!/bin/bash
+
+echo '''    _              _
+   / \   ___  __ _(_)___
+  / _ \ / _ \/ _` | / __|
+ / ___ |  __| (_| | \__ \
+/_/   \_\___|\__, |_|___/
+             |___/'''
+
+
 # Check if the script is being run as root
 if [ "$EUID" -ne 0 ]; then
     sudo "$0" "$@"
