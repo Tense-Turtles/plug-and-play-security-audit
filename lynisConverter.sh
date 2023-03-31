@@ -4,7 +4,7 @@ echo "Welcome to Plug and Play Audit System"
 
 # converter package required 
 git clone https://github.com/d4t4king/lynis-report-converter.git
-cd lilynis-report-converter
+cd lynis-report-converter
 
 
 # Dependencies for converting raw data to pdf 
