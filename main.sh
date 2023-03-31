@@ -91,9 +91,9 @@ nmapScan() {
 }
 
 ZapScan() {
-    read target_url
-
-    java -jar ZAP/zap-2.12.0.jar -cmd -quickurl $target_url -quickprogress
+    # read target_url
+echo "WIP"
+    # java -jar ZAP/zap-2.12.0.jar -cmd -quickurl $target_url -quickprogress
 
 }
 while true; do
