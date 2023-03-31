@@ -26,7 +26,7 @@ popd
 popd
 
 # Execution command
-
+# use can specify where the file should be output to a particular location...
 ./lynis-report-converter.pl -j -o json_report.json
 ./lynis-report-converter.pl -p -o report.pdf
 
