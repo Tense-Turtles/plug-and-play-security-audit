@@ -53,24 +53,31 @@ fullScan() {
     ZapScan
     #Upload to mongo
 
-    file_path="lynis-report-converter/report.pdf"
+    file_path="lynis-report-converter/json_report.json"
 
     collection="auditReports"
 
     mongoimport --uri "$connection_string" --collection "$collection" --file "$file_path"
+
+    
+    file_path="lynis-report-converter/report.pdf"
+
+    collection="auditReports"
+
+    mongofiles --uri "$connection_string" --collection "$collection" --file "$file_path"
 
     file_path="devices.xml"
 
     collection="auditReports"
 
-    mongoimport --uri "$connection_string" --collection "$collection" --file "$file_path"
+    mongofiles --uri "$connection_string" --collection "$collection" --file "$file_path"
 
 
     file_path="targetDevice.xml"
 
     collection="auditReports"
 
-    mongoimport --uri "$connection_string" --collection "$collection" --file "$file_path"
+    mongofiles --uri "$connection_string" --collection "$collection" --file "$file_path"
     
 
 }
