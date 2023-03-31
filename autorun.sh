@@ -24,7 +24,7 @@ cols=$(echo $screen_size | cut -d' ' -f2)
 # Define the menu options
 options=("Full Audit" "Nmap" "ZAP Scan" "Quit")
 
-connection_string="mongodb+srv://shellr:<password>@cluster0.zfbvsyl.mongodb.net/Kavach?retryWrites=true&w=majority"
+connection_string="mongodb+srv://shellr:gZ8yt1D1zg3ro9qe@cluster0.zfbvsyl.mongodb.net/Kavach?retryWrites=true&w=majority"
 
 show_menu() {
     clear
