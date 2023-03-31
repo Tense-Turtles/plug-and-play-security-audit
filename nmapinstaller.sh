@@ -14,7 +14,7 @@ echo "Nmap has been successfully installed."
 # echo "My IP address is: $IP"
 
 # # Scan the local network for devices using Nmap
-# nmap -sn $IP/24 -oX devices.xml
+nmap -sn $IP/24 -oX devices.xml
 
 # nmap -A -sS -sV -p- -T4 $IP -oX targetDevice.xml
 

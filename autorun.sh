@@ -7,7 +7,6 @@ echo '''    _              _
 /_/   \_\___|\__, |_|___/
              |___/'''
 
-
 # Check if the script is being run as root
 if [ "$EUID" -ne 0 ]; then
     sudo "$0" "$@"
@@ -49,36 +48,27 @@ fullScan() {
 
     cd ..
 
+    pwd
     nmapScan
     ZapScan
+    pwd
     #Upload to mongo
-
-    file_path="lynis-report-converter/json_report.json"
-
-    collection="auditReports"
-
-    mongoimport --uri "$connection_string" --collection "$collection" --file "$file_path"
-
-    
-    file_path="lynis-report-converter/report.pdf"
-
-    collection="auditReports"
-
-    mongofiles --uri "$connection_string" --collection "$collection" --file "$file_path"
 
     file_path="devices.xml"
 
     collection="auditReports"
 
-    mongofiles --uri "$connection_string" --collection "$collection" --file "$file_path"
-
+    mongofiles --uri "$connection_string" put "$file_path"
 
     file_path="targetDevice.xml"
 
     collection="auditReports"
 
-    mongofiles --uri "$connection_string" --collection "$collection" --file "$file_path"
-    
+    mongofiles --uri "$connection_string" put "$file_path"
+
+    cd plug-and-play-security-audit/
+    # pwd
+    source ./mongoTester.sh
 
 }
 
@@ -99,7 +89,7 @@ nmapScan() {
 
 ZapScan() {
     # read target_url
-echo "WIP"
+    echo "WIP"
     # java -jar ZAP/zap-2.12.0.jar -cmd -quickurl $target_url -quickprogress
 
 }
