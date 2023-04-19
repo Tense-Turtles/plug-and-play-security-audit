@@ -21,7 +21,7 @@ rows=$(echo $screen_size | cut -d' ' -f1)
 cols=$(echo $screen_size | cut -d' ' -f2)
 
 # Define the menu options
-options=("Full Audit" "Nmap" "ZAP Scan" "Quit")
+options=("Full Audit" "Nmap" "ZAP Scan" "ClamAV Scan" "Quit")
 
 connection_string="mongodb+srv://shellr:gZ8yt1D1zg3ro9qe@cluster0.zfbvsyl.mongodb.net/Kavach?retryWrites=true&w=majority"
 
@@ -69,6 +69,21 @@ fullScan() {
     cd plug-and-play-security-audit/
     # pwd
     source ./mongoTester.sh
+    
+    sudo apt-get install -y clamav
+
+# Configure ClamAV
+echo "Configuring ClamAV..."
+sudo freshclam # Update virus definition database
+sudo systemctl stop clamav-freshclam # Stop freshclam service
+sudo systemctl disable clamav-freshclam # Disable freshclam service
+sudo sed -i 's/Example/#Example/' /etc/clamav/freshclam.conf # Comment out example configuration
+sudo sed -i 's/#LocalSocket \/run\/clamav\/clamd.sock/LocalSocket \/var\/run\/clamav\/clamd.sock/' /etc/clamav/clamd.conf # Update Clamd socket path
+sudo systemctl restart clamav-daemon # Restart ClamAV daemon
+
+# Run ClamAV scan
+echo "Running ClamAV scan..."
+sudo clamscan -r ~ # Replace /path/to/scan_directory with the directory you want to scan
 
 }
 
@@ -101,7 +116,8 @@ while true; do
     1) fullScan ;;
     2) nmapScan ;;
     3) ZAPScan ;;
-    4) break ;;
+    4) ClamAV Check;;
+    5) break ;;
     *) echo "Invalid option" ;;
     esac
     read -n1 -p "Press any key to continue..."
