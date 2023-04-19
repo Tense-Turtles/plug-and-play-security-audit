@@ -1,7 +1,7 @@
 # Plug & play system security audit tool (KVH-018)
 
 ## Given problem statement 
-Plug and Play System Security Audit Tool for Windows, and Linux. Agent-based with a centralized dashboard.
+Plug and Play System Security Audit Tool for Windows, and Linux with a centralized dashboard.
 
 ## About
 
@@ -40,8 +40,16 @@ The different things it scans for are
 ## Preview
 <table>
   <tr>
-    <td><img src="https://github.com/Tense-Turtles/plug-and-play-security-audit/blob/main/dashboard.png"  ></td>
-    <td><img src="https://github.com/Tense-Turtles/plug-and-play-security-audit/blob/main/report.png" ></td>
+    <td>
+    <img src="https://user-images.githubusercontent.com/78999739/233152237-f5c16e58-8b91-4d32-b3fe-185130006b03.png">
+    </td>
+  <td>
+    <img src="https://user-images.githubusercontent.com/78999739/233151585-7c69edcf-d17c-4a5b-9423-ca694b525a43.png">
+  </td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/Tense-Turtles/plug-and-play-security-audit/raw/main/dashboard.png"  ></td>
+    <td><img src="https://github.com/Tense-Turtles/plug-and-play-security-audit/raw/main/report.png" ></td>
   </tr>
  </table>
 
