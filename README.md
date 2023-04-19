@@ -38,8 +38,12 @@ The different things it scans for are
 - **MetaCpan’s Html Doc Convert**  - convert the generated reports to html boilerplate. 
 
 ## Preview
-[]()
-[]()
+<table>
+  <tr>
+    <td><img src="https://github.com/Tense-Turtles/plug-and-play-security-audit/blob/main/dashboard.png"  ></td>
+    <td><img src="https://github.com/Tense-Turtles/plug-and-play-security-audit/blob/main/report.png" ></td>
+  </tr>
+ </table>
 
 
 <!--- ## ZAP --->
