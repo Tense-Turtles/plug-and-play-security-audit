@@ -22,8 +22,8 @@ The different things it scans for are
 🔗 Find the links below for 
 - [prototype](https://github.com/Tense-Turtles/plug-and-play-security-audit/) 
 - [ppt](https://docs.google.com/presentation/d/1M9kIHzl2oGw3RfJL4fgLBImlGZEQJziT/edit#slide=id.p5)
-- [centralized dashboard](https://github.com/Tense-Turtles/plug-and-play-security-audit/)
-- [demo video](https://github.com/Tense-Turtles/plug-and-play-security-audit/)
+<!-- - [centralized dashboard](https://github.com/Tense-Turtles/plug-and-play-security-audit/) --> 
+<!-- - [demo video](https://github.com/Tense-Turtles/plug-and-play-security-audit/) -->
 
 ## Tech Stack Used
 - **Shell Script** - Powershell (windows) or BASH (linux)
